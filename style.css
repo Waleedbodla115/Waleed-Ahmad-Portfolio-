@@ -445,4 +445,45 @@ footer{
 
     transform:scale(1.05);
 
+}@media (max-width: 768px){
+
+    nav{
+        flex-direction: column;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .projects-container{
+        flex-direction: column;
+    }
+
+}section{
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
