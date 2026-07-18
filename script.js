@@ -1,13 +1,18 @@
+
+
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
 
-menuBtn.addEventListener("click",()=>{
+if(menuBtn && navLinks){
 
-    navLinks.classList.toggle("active");
+    menuBtn.addEventListener("click",()=>{
 
-});
+        navLinks.classList.toggle("active");
 
+    });
+
+}
 
 
 
@@ -15,25 +20,29 @@ menuBtn.addEventListener("click",()=>{
 const darkBtn = document.querySelector("#darkModeBtn");
 
 
-darkBtn.addEventListener("click",()=>{
+if(darkBtn){
 
-    document.body.classList.toggle("dark");
+    darkBtn.addEventListener("click",()=>{
 
-
-    if(document.body.classList.contains("dark")){
-
-        darkBtn.innerHTML="☀️ Light Mode";
-
-    }
-
-    else{
-
-        darkBtn.innerHTML="🌙 Dark Mode";
-
-    }
+        document.body.classList.toggle("dark");
 
 
-});
+        if(document.body.classList.contains("dark")){
+
+            darkBtn.innerHTML = "☀️ Light Mode";
+
+        }
+        else{
+
+            darkBtn.innerHTML = "🌙 Dark Mode";
+
+        }
+
+
+    });
+
+}
+
 
 
 
@@ -42,19 +51,27 @@ darkBtn.addEventListener("click",()=>{
 
 
 const form = document.querySelector("#contactForm");
+const successMessage = document.querySelector("#successMessage");
 
 
-form.addEventListener("submit",(e)=>{
+if(form){
+
+    form.addEventListener("submit",(e)=>{
+
+        e.preventDefault();
 
 
-    e.preventDefault();
+        if(successMessage){
+
+            successMessage.innerHTML =
+            "Thank you Waleed! Your message has been received.";
+
+        }
 
 
-    document.querySelector("#successMessage").innerHTML =
-    "Thank you Waleed! Your message has been received.";
+        form.reset();
 
 
-    form.reset();
+    });
 
-
-});
+}

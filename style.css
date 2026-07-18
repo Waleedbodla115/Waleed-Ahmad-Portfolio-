@@ -2,15 +2,17 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins', Arial, sans-serif;
     scroll-behavior:smooth;
 }
 
 
 body{
-    font-family:Arial, sans-serif;
     background:#f5f8ff;
     color:#222;
 }
+
+
 
 
 nav{
@@ -28,35 +30,29 @@ nav{
 .nav-links{
     display:flex;
     gap:25px;
+    list-style:none;
 }
 
 
 .nav-links a{
     color:white;
     text-decoration:none;
-    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
 }
 
 
 .nav-links a:hover{
-    color:#ffd700;
+    color:#ffeb3b;
 }
 
 
 .menu-btn{
     display:none;
-    font-size:25px;
     background:none;
+    border:none;
     color:white;
-    border:none;
-}
-
-
-
-#darkModeBtn{
-    padding:8px 15px;
-    border:none;
-    border-radius:20px;
+    font-size:28px;
     cursor:pointer;
 }
 
@@ -64,28 +60,29 @@ nav{
 
 
 
+
 section{
-    padding:60px 8%;
+    padding:70px 8%;
+    animation:fadeIn 1s ease;
 }
 
 
 h2{
     text-align:center;
-    margin-bottom:40px;
     color:#0d47a1;
+    margin-bottom:40px;
 }
 
 
 
 
-
-/* HERO */
 
 
 .hero{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    min-height:80vh;
     gap:40px;
 }
 
@@ -108,62 +105,52 @@ h2{
 
 
 .hero-text p{
-    font-size:20px;
+    font-size:18px;
 }
 
 
-
 .hero-image img{
+
     width:250px;
     height:250px;
     border-radius:50%;
     object-fit:cover;
     border:5px solid #0d47a1;
+
 }
+
+
 
 
 
 
 .btn,
 .project-btn{
+
     display:inline-block;
     background:#0d47a1;
     color:white;
-    padding:10px 20px;
-    margin:15px 5px;
-    text-decoration:none;
+    padding:12px 25px;
+    margin-top:20px;
     border-radius:5px;
+    text-decoration:none;
+    transition:.3s;
+
 }
 
 
 .btn:hover,
 .project-btn:hover{
-    background:#000;
+
+    background:black;
+    transform:scale(1.05);
+
 }
 
 
 
 
 
-
-.card,
-.skill-card,
-.service-card,
-.project-card{
-
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px #ccc;
-}
-
-
-
-
-
-
-
-/* SKILLS */
 
 
 .skills-container,
@@ -177,240 +164,17 @@ h2{
 }
 
 
-.skill-card{
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-}
-
-
-
-
-
-
-/* PROJECT */
-
-
-.project-card img{
-
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
-
-}
-
-
-.project-card h3{
-    margin:15px 0;
-}
-
-
-
-
-
-/* CONTACT */
-
-
-.contact-form{
-
-    max-width:600px;
-    margin:auto;
-
-}
-
-
-form input,
-form textarea{
-
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
-
-}
-
-
-form button{
-
-    background:#0d47a1;
-    color:white;
-    padding:12px 30px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-
-}
-
-
-
-#successMessage{
-    color:green;
-    margin-top:10px;
-}
-
-
-
-
-
-
-footer{
-
-    text-align:center;
-    padding:20px;
-    background:#0d47a1;
-    color:white;
-
-}
-
-
-
-
-
-
-/* DARK MODE */
-
-
-.dark{
-
-    background:#111;
-    color:white;
-
-}
-
-
-.dark .card,
-.dark .skill-card,
-.dark .service-card,
-.dark .project-card{
-
-    background:#222;
-    color:white;
-
-}
-
-
-
-
-/* MOBILE */
-
-
-@media(max-width:768px){
-
-
-.hero{
-
-    flex-direction:column;
-    text-align:center;
-
-}
-
-
-.hero-text{
-
-    width:100%;
-
-}
-
-
-.nav-links{
-
-    display:none;
-    flex-direction:column;
-
-}
-
-
-.nav-links.active{
-
-    display:flex;
-
-}
-
-
-.menu-btn{
-
-    display:block;
-
-}
-
-
-
-.skills-container,
-.services-container,
-.projects-container{
-
-    grid-template-columns:1fr;
-
-}
-
-
-.hero-text h1{
-
-    font-size:35px;
-
-}
-
-
-
-}
-/* ANIMATIONS */
-
-
-.hero-text{
-    animation: slideLeft 1s ease;
-}
-
-
-.hero-image{
-    animation: slideRight 1s ease;
-}
-
-
-
-@keyframes slideLeft{
-
-    from{
-        opacity:0;
-        transform:translateX(-50px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
-
-}
-
-
-
-@keyframes slideRight{
-
-    from{
-        opacity:0;
-        transform:translateX(50px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
-
-}
-
-
-
-
-
-/* CARD HOVER EFFECT */
-
 
 .skill-card,
 .service-card,
 .project-card{
 
-    transition:0.3s;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px #ccc;
+    transition:.3s;
 
 }
 
@@ -429,61 +193,190 @@ footer{
 
 
 
-/* BUTTON EFFECT */
 
 
-.btn,
-.project-btn{
+.contact-form{
 
-    transition:0.3s;
+    max-width:600px;
+    margin:auto;
 
 }
 
 
-.btn:hover,
-.project-btn:hover{
 
-    transform:scale(1.05);
+form input,
+form textarea{
 
-}@media (max-width: 768px){
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
 
-    nav{
-        flex-direction: column;
-    }
-
-    .nav-links{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero img{
-        width: 150px;
-        height: 150px;
-    }
-
-    .projects-container{
-        flex-direction: column;
-    }
-
-}section{
-    animation: fadeIn 1s ease-in;
 }
+
+
+
+form button{
+
+    background:#0d47a1;
+    color:white;
+    padding:12px 30px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+
+}
+
+
+
+#successMessage{
+
+    color:green;
+
+}
+
+
+
+
+
+
+
+
+footer{
+
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:18px;
+
+}
+
+
+
+
+
+
+
+
+.dark{
+
+    background:#111;
+    color:white;
+
+}
+
+
+.dark .skill-card,
+.dark .service-card,
+.dark .project-card{
+
+    background:#222;
+    color:white;
+
+}
+
+
+
+
 
 @keyframes fadeIn{
 
     from{
+
         opacity:0;
         transform:translateY(20px);
+
     }
 
     to{
+
         opacity:1;
         transform:translateY(0);
+
     }
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+nav{
+
+    flex-direction:column;
+
+}
+
+
+.nav-links{
+
+    display:none;
+    flex-direction:column;
+    text-align:center;
+    margin-top:15px;
+
+}
+
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+
+.menu-btn{
+
+    display:block;
+
+}
+
+
+.hero{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+
+.hero-text{
+
+    width:100%;
+
+}
+
+
+.hero-text h1{
+
+    font-size:35px;
+
+}
+
+
+.hero-image img{
+
+    width:170px;
+    height:170px;
+
+}
+
+
+.skills-container,
+.services-container,
+.projects-container{
+
+    grid-template-columns:1fr;
+
+}
+
 
 }
