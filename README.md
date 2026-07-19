@@ -1,4 +1,4 @@
-# Waleed Ahmad | Front-End Web Developer 🚀
+a# Waleed Ahmad | Front-End Web Developer 🚀
 
 Welcome to my personal portfolio website.
 
@@ -29,7 +29,8 @@ https://waleedbodla115.github.io/Waleed-Ahmad-Portfolio-/
 ## 📂 Projects
 
 ### 💻 Portfolio Website
-
+Live Demo:
+https://waleedbodla115.github.io/Waleed-Ahmad-Portfolio-/
 My personal developer portfolio built using:
 
 - HTML
@@ -43,6 +44,8 @@ Features:
 
 
 ### ✅ JavaScript Todo App
+Live Demo:
+https://waleedbodla115.github.io/JavaScript-Todo-App/
 
 A task management application built using:
 
