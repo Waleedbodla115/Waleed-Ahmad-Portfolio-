@@ -1,238 +1,76 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', Arial, sans-serif;
-    scroll-behavior:smooth;
-}
+.project-card img {
 
-
-body{
-    background:#f5f8ff;
-    color:#222;
-}
-
-
-
-
-nav{
-    background:#0d47a1;
-    padding:15px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-
-.nav-links{
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
-
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    transition:.3s;
-}
-
-
-.nav-links a:hover{
-    color:#ffeb3b;
-}
-
-
-.menu-btn{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-}
-
-
-
-
-
-
-section{
-    padding:70px 8%;
-    animation:fadeIn 1s ease;
-}
-
-
-h2{
-    text-align:center;
-    color:#0d47a1;
-    margin-bottom:40px;
-}
-
-
-
-
-
-
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    min-height:80vh;
-    gap:40px;
-}
-
-
-.hero-text{
-    width:50%;
-}
-
-
-.hero-text h1{
-    font-size:45px;
-    color:#0d47a1;
-}
-
-
-.hero-text h2{
-    text-align:left;
-    margin:15px 0;
-}
-
-
-.hero-text p{
-    font-size:18px;
-}
-
-
-.hero-image img{
-
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #0d47a1;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 
 }
 
+/* ================= CONTACT FORM ================= */
 
 
+.contact-form {
 
-
-
-.btn,
-.project-btn{
-
-    display:inline-block;
-    background:#0d47a1;
-    color:white;
-    padding:12px 25px;
-    margin-top:20px;
-    border-radius:5px;
-    text-decoration:none;
-    transition:.3s;
-
-}
-
-
-.btn:hover,
-.project-btn:hover{
-
-    background:black;
-    transform:scale(1.05);
-
-}
-
-
-
-
-
-
-
-.skills-container,
-.services-container,
-.projects-container{
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-
-}
-
-
-
-.skill-card,
-.service-card,
-.project-card{
-
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px #ccc;
-    transition:.3s;
-
-}
-
-
-
-.skill-card:hover,
-.service-card:hover,
-.project-card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-
-
-
-
-
-
-
-.contact-form{
-
-    max-width:600px;
-    margin:auto;
+    max-width: 600px;
+    margin: auto;
 
 }
 
 
 
 form input,
-form textarea{
+form textarea {
 
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
-
-}
-
-
-
-form button{
-
-    background:#0d47a1;
-    color:white;
-    padding:12px 30px;
-    border:none;
-    cursor:pointer;
-    border-radius:5px;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
 
 }
 
 
 
-#successMessage{
+form textarea {
 
-    color:green;
+    height: 150px;
+    resize: none;
+
+}
+
+
+
+form button {
+
+    background: #0d47a1;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+
+}
+
+
+
+form button:hover {
+
+    background: #ffeb3b;
+    color: #111;
+
+}
+
+
+
+#successMessage {
+
+    color: green;
+    margin-top: 15px;
 
 }
 
@@ -240,16 +78,43 @@ form button{
 
 
 
+/* ================= FOOTER ================= */
+
+
+footer {
+
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 17px;
+
+}
 
 
 
-footer{
+.social-links {
 
-    background:#0d47a1;
-    color:white;
-    text-align:center;
-    padding:25px;
-    font-size:18px;
+    margin-top: 15px;
+
+}
+
+
+
+.social-links a {
+
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: .3s;
+
+}
+
+
+
+.social-links a:hover {
+
+    color: #ffeb3b;
 
 }
 
@@ -257,133 +122,354 @@ footer{
 
 
 
+/* ================= DARK MODE ================= */
 
 
+.dark {
 
-.dark{
-
-    background:#111;
-    color:white;
+    background: #111;
+    color: white;
 
 }
+
+
+
+.dark nav,
+.dark footer {
+
+    background: #000;
+
+}
+
+
+
+.dark h2,
+.dark .hero-text h1 {
+
+    color: #ffeb3b;
+
+}
+
 
 
 .dark .skill-card,
 .dark .service-card,
-.dark .project-card{
+.dark .project-card,
+.dark .card {
 
-    background:#222;
+    background: #222;
+    color: white;
+
+}
+
+
+
+.dark input,
+.dark textarea {
+
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+
+}
+
+
+
+
+
+/* ================= ANIMATIONS ================= */
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+
+@keyframes slideLeft {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(-50px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+
+
+
+@keyframes slideRight {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+
+
+@media(max-width:768px) {
+
+
+
+    nav {
+
+        flex-direction: column;
+        gap: 15px;
+
+    }
+
+
+
+
+    .nav-links {
+
+        display: none;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+
+
+
+    .nav-links.active {
+
+        display: flex;
+
+    }
+
+
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+
+
+    .hero {
+
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+
+
+
+    .hero-text {
+
+        width: 100%;
+
+    }
+
+
+
+
+    .hero-text h1 {
+
+        font-size: 35px;
+
+    }
+
+
+
+
+    .hero-text h2 {
+
+        text-align: center;
+
+    }
+
+
+
+
+    .hero-image img {
+
+        width: 180px;
+        height: 180px;
+
+    }
+
+
+
+
+
+}
+
+.reveal {
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
+
+}
+
+
+.reveal.active {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}#topBtn{
+
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#0d47a1;
     color:white;
-
-}
-
-
-
-
-
-@keyframes fadeIn{
-
-    from{
-
-        opacity:0;
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
-}
-
-
-
-
-
-
-
-
-@media(max-width:768px){
-
-
-nav{
-
-    flex-direction:column;
-
-}
-
-
-.nav-links{
-
+    font-size:25px;
+    cursor:pointer;
     display:none;
-    flex-direction:column;
-    text-align:center;
-    margin-top:15px;
+    transition:.3s;
 
 }
 
 
-.nav-links.active{
+#topBtn:hover{
 
-    display:flex;
+    background:#ffeb3b;
+    color:#111;
 
 }
 
 
-.menu-btn{
+#topBtn.show{
 
     display:block;
 
-}
+}const topBtn = document.querySelector("#topBtn");
 
 
-.hero{
-
-    flex-direction:column;
-    text-align:center;
-
-}
+window.addEventListener("scroll",()=>{
 
 
-.hero-text{
+    if(window.scrollY > 300){
 
+        topBtn.classList.add("show");
+
+    }
+    else{
+
+        topBtn.classList.remove("show");
+
+    }
+
+
+});
+
+
+
+if(topBtn){
+
+    topBtn.addEventListener("click",()=>{
+
+
+        window.scrollTo({
+
+            top:0,
+            behavior:"smooth"
+
+        });
+
+
+    });
+
+}#loader{
+
+    position:fixed;
     width:100%;
+    height:100vh;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
 
 }
 
 
-.hero-text h1{
+.spinner{
 
-    font-size:35px;
-
-}
-
-
-.hero-image img{
-
-    width:170px;
-    height:170px;
+    width:60px;
+    height:60px;
+    border:6px solid #ddd;
+    border-top:6px solid #0d47a1;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
 
 }
 
 
-.skills-container,
-.services-container,
-.projects-container{
 
-    grid-template-columns:1fr;
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
 
 }
 
 
-}.project-card img{
 
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
+#loader.hide{
+
+    opacity:0;
+    visibility:hidden;
+    transition:.5s;
 
 }
